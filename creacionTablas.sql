@@ -26,13 +26,11 @@ CREATE TABLE "OW_TST_US"."Usuarios"
 	"nickname"     	 varchar(255) not null,
 	"contrasena"   	 varchar(255) not null ,
 	"id_usuario" 	 integer not null,
-	"tipo_usuario" 	 integer null,
 	"tipo_pagina"  	 integer null,
 	"estado" 		 varchar(25)
 );
 COMMENT ON COLUMN "OW_TST_US"."Usuarios"."nickname"     IS 'nombre de usuario unico de la persona registrada';
 COMMENT ON COLUMN "OW_TST_US"."Usuarios"."contrasena"   IS 'contrasena de usuario la persona registrada';
-COMMENT ON COLUMN "OW_TST_US"."Usuarios"."tipo_usuario" IS 'identificador de tipo de usuario al que pertenece';
 COMMENT ON COLUMN "OW_TST_US"."Usuarios"."tipo_pagina"  IS 'identificador de tipo de pagina al que pertenece';
 COMMENT ON COLUMN "OW_TST_US"."Usuarios"."id_usuario"   IS 'identificador unigo de la persona registrada';
 COMMENT ON COLUMN "OW_TST_US"."Usuarios"."estado"       IS 'muestra el estado en el que se encuentra el usuario';
@@ -40,10 +38,13 @@ COMMENT ON COLUMN "OW_TST_US"."Usuarios"."estado"       IS 'muestra el estado en
 
 CREATE TABLE "OW_TST_US"."TipoUsuario"(
 	"id"                  integer not null,
-	"nombre_tipo_usuario"  varchar(255) not null 
+	"nombre_tipo_usuario"  varchar(255) not null ,
+	"id_usuario" 	 integer not null
 );
 COMMENT ON COLUMN "OW_TST_US"."TipoUsuario"."id"                  IS 'identificador unico del tipo de usuario';
 COMMENT ON COLUMN "OW_TST_US"."TipoUsuario"."nombre_tipo_usuario" IS 'nombre del tipo de usuario ';
+COMMENT ON COLUMN "OW_TST_US"."Usuarios"."id_usuario"             IS 'identificador unigo de la persona registrada';
+
 --
 
 CREATE TABLE "OW_TST_US"."TipoPagina"(

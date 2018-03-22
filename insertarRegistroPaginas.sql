@@ -1,1 +1,1 @@
-insert into pagina(id,nombre_pagina,tipo_pagina) values(1,'ferreteria',1);
+insert into "Pagina"("id","nombre_pagina","tipo_pagina") values(1,'ferreteria',1);

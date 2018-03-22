@@ -1,4 +1,4 @@
 UPDATE personas
       SET nombre = 'Sneider'
-        WHERE nickname = 'jstm92';
+        WHERE documento = '123456';
     END;

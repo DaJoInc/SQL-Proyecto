@@ -1,1 +1,1 @@
-INSERT INTO usuarios(nickname,contrasena) SELECT nickname,contrasena from personas;
+INSERT INTO "Usuarios"("nickname","contrasena","id_usuario") values('jstm92','joan53',1)

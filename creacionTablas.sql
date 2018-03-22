@@ -27,7 +27,7 @@ CREATE TABLE "OW_TST_US"."Usuarios"
 	"contrasena"   	 varchar(255) not null ,
 	"id_usuario" 	 integer not null,
 	"tipo_pagina"  	 integer null,
-	"estado" 		 varchar(25)
+	"estado" 		 varchar(25) 
 );
 COMMENT ON COLUMN "OW_TST_US"."Usuarios"."nickname"     IS 'nombre de usuario unico de la persona registrada';
 COMMENT ON COLUMN "OW_TST_US"."Usuarios"."contrasena"   IS 'contrasena de usuario la persona registrada';
@@ -43,7 +43,7 @@ CREATE TABLE "OW_TST_US"."TipoUsuario"(
 );
 COMMENT ON COLUMN "OW_TST_US"."TipoUsuario"."id"                  IS 'identificador unico del tipo de usuario';
 COMMENT ON COLUMN "OW_TST_US"."TipoUsuario"."nombre_tipo_usuario" IS 'nombre del tipo de usuario ';
-COMMENT ON COLUMN "OW_TST_US"."Usuarios"."id_usuario"             IS 'identificador unigo de la persona registrada';
+COMMENT ON COLUMN "OW_TST_US"."TipoUsuario"."id_usuario"             IS 'identificador unigo de la persona registrada';
 
 --
 

@@ -1,1 +1,1 @@
-INSERT INTO "Usuarios"("nickname","contrasena","id_usuario") values('jstm92','joan53',1)
+INSERT INTO "Usuarios"("nickname","contrasena","id_usuario") values('ssmm92','smillan53',2)

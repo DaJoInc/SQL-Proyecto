@@ -1,4 +1,4 @@
-insert into "Personas"(    
+insert into "OW_TST_US"."Personas"(    
 			"id_usuario",
 			"nombre",
 			"apellidos",

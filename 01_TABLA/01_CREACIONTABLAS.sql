@@ -26,11 +26,10 @@ CREATE TABLE "OW_TST_US"."Usuarios"
 --
 
 CREATE TABLE "OW_TST_US"."TipoUsuario"(
-	"id"                  integer not null,
+	"id"                   integer not null,
 	"nombre_tipo_usuario"  varchar(255) not null ,
-	"id_usuario" 	 integer not null
+	"id_usuario" 	       integer not null
 );
-
 
 --
 
@@ -47,8 +46,8 @@ CREATE TABLE "OW_TST_US"."Pagina"(
 	"tipo_pagina"      integer not null
 );
 
-
 --
+
 CREATE TABLE "OW_TST_US"."Estado"
 (
 	"id"  				integer not null ,

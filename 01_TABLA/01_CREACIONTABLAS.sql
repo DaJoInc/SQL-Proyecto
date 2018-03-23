@@ -53,3 +53,4 @@ CREATE TABLE "OW_TST_US"."Estado"
 (
 	"id"  				integer not null ,
 	"nombre_estado"     VARCHAR(255) not null
+	);

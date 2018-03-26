@@ -1,17 +1,22 @@
-alter table "OW_TST_US"."Usuarios"
-add FOREIGN KEY ("tipo_pagina") REFERENCES "OW_TST_US"."TipoPagina"("id");
+alter table "OW_TST_US"."USUARIOS"
+add FOREIGN KEY ("TIPO_PAGINA") REFERENCES "OW_TST_US"."TIPOPAGINA"("ID");
 
 --
 
-alter table "OW_TST_US"."Usuarios"
-add FOREIGN KEY ("id_usuario") REFERENCES "OW_TST_US"."Personas"("id_usuario");
+alter table "OW_TST_US"."USUARIOS"
+add FOREIGN KEY ("ID_USUARIO") REFERENCES "OW_TST_US"."PERSONAS"("ID_USUARIO");
 
 --
 
-alter table "OW_TST_US"."TipoUsuario"
-add FOREIGN KEY ("id_usuario") REFERENCES "OW_TST_US"."Personas"("id_usuario");
+alter table "OW_TST_US"."USUARIOS"
+add FOREIGN KEY ("ESTADO") REFERENCES "OW_TST_US"."ESTADO"("ID_ESTADO");
 
 --
 
-alter table "OW_TST_US"."Pagina"
-add FOREIGN KEY ("tipo_pagina") REFERENCES "OW_TST_US"."TipoPagina"("id");
+alter table "OW_TST_US"."TIPOUSUARIO"
+add FOREIGN KEY ("ID_USUARIO") REFERENCES "OW_TST_US"."PERSONAS"("ID_USUARIO");
+
+--
+
+alter table "OW_TST_US"."PAGINA"
+add FOREIGN KEY ("TIPO_PAGINA") REFERENCES "OW_TST_US"."TIPOPAGINA"("ID");

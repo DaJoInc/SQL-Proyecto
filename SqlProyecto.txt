@@ -1,0 +1,184 @@
+00_SCHEMA...
+CREANDO TABLAS
+
+Table "OW_TST_US"."PERSONAS" creado.
+
+
+Table "OW_TST_US"."USUARIOS" creado.
+
+
+Table "OW_TST_US"."TIPOUSUARIO" creado.
+
+
+Table "OW_TST_US"."TIPOPAGINA" creado.
+
+
+Table "OW_TST_US"."PAGINA" creado.
+
+
+Table "OW_TST_US"."ESTADO" creado.
+
+CREANDO COMENTARIOS
+
+Comment creado.
+
+
+Comment creado.
+
+
+Comment creado.
+
+
+Comment creado.
+
+
+Comment creado.
+
+
+Comment creado.
+
+
+Comment creado.
+
+
+Comment creado.
+
+
+Comment creado.
+
+
+Comment creado.
+
+
+Comment creado.
+
+
+Comment creado.
+
+
+Comment creado.
+
+
+Comment creado.
+
+
+Comment creado.
+
+
+Comment creado.
+
+
+Comment creado.
+
+
+Comment creado.
+
+
+Comment creado.
+
+
+Comment creado.
+
+
+Comment creado.
+
+
+Comment creado.
+
+
+Comment creado.
+
+CREANDO SECUENCIAS
+
+Sequence ID_PERSONA creado.
+
+
+Sequence ID_TIPOUSUARIO creado.
+
+
+Sequence ID_TIPOPAGINA creado.
+
+
+Sequence ID_PAGINA creado.
+
+
+Sequence ID_ESTADO creado.
+
+CREANDO CLAVES PRIMARIAS
+
+Table "OW_TST_US"."PERSONAS" alterado.
+
+
+Table "OW_TST_US"."USUARIOS" alterado.
+
+
+Table "OW_TST_US"."TIPOUSUARIO" alterado.
+
+
+Table "OW_TST_US"."TIPOPAGINA" alterado.
+
+
+Table "OW_TST_US"."PAGINA" alterado.
+
+
+Table "OW_TST_US"."ESTADO" alterado.
+
+CREANDO CLAVES FORANEAS
+
+Table "OW_TST_US"."USUARIOS" alterado.
+
+
+Table "OW_TST_US"."USUARIOS" alterado.
+
+
+Table "OW_TST_US"."USUARIOS" alterado.
+
+
+Table "OW_TST_US"."TIPOUSUARIO" alterado.
+
+
+Table "OW_TST_US"."PAGINA" alterado.
+
+CREANDO PAQUETE INSERTAR DATOS PERSONA
+
+Package PERSONAS_CRUD compilado
+
+
+PACKAGE BODY: PERSONAS_CRUD
+
+
+Package Body PERSONAS_CRUD compilado
+
+CREANDO PAQUETE INSERTAR DATOS USUARIO
+
+Package USUARIOS_CRUD compilado
+
+
+PACKAGE BODY: USUARIOS_CRUD
+
+
+Package Body USUARIOS_CRUD compilado
+
+Errores: comprobar log de compilador
+CREANDO PAQUETE INGRESO
+
+Package INGRESO compilado
+
+
+PACKAGE BODY: INGRESO
+
+
+Package Body INGRESO compilado
+
+Errores: comprobar log de compilador
+CREANDO PAQUETE ORQUESTADOR
+
+Package ORQUESTADOR compilado
+
+
+PACKAGE BODY: ORQUESTADOR
+
+
+Package Body ORQUESTADOR compilado
+
+Errores: comprobar log de compilador

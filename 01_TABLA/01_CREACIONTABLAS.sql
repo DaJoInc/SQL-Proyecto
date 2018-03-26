@@ -1,55 +1,55 @@
 --
-CREATE TABLE "OW_TST_US"."Personas"
+CREATE TABLE "OW_TST_US"."PERSONAS"
 (
-	"id_usuario"  		integer not null,
-	"nombre"      		VARCHAR(255) not null,
-	"apellidos"   		VARCHAR(255) not null,
-	"documento"   		integer not null,
-	"tipo_dpcumento" 	varchar(25) not null,
-	"correo"     		VARCHAR(255) not null,
-	"ano_nacimiento"  	date null,
-	"telefono"    		integer not null
+	"ID_USUARIO"  		INTEGER NOT NULL,
+	"NOMBRE"      		VARCHAR(255) NOT NULL,
+	"APELLIDOS"   		VARCHAR(255) NOT NULL,
+	"DOCUMENTO"   		INTEGER NOT NULL,
+	"TIPO_DOCUMENTO" 	VARCHAR(25) NOT NULL,
+	"CORREO"     		VARCHAR(255) NOT NULL,
+	"ANO_NACIMIENTO"  	DATE NULL,
+	"TELEFONO"    		INTEGER NOT NULL
 	
 );
 
 --
 
-CREATE TABLE "OW_TST_US"."Usuarios"
+CREATE TABLE "OW_TST_US"."USUARIOS"
 (
-	"nickname"     	 varchar(255) not null,
-	"contrasena"   	 varchar(255) not null ,
-	"id_usuario" 	 integer not null,
-	"tipo_pagina"  	 integer null,
-	"estado" 		 varchar(25) 
+	"NICKNAME"     	 VARCHAR(255) NOT NULL,
+	"CONTRASENA"   	 VARCHAR(255) NOT NULL ,
+	"ID_USUARIO" 	 INTEGER NOT NULL,
+	"TIPO_PAGINA"  	 INTEGER NULL,
+	"ESTADO" 		 INTEGER 
 );
 
 --
 
-CREATE TABLE "OW_TST_US"."TipoUsuario"(
-	"id"                   integer not null,
-	"nombre_tipo_usuario"  varchar(255) not null ,
-	"id_usuario" 	       integer not null
+CREATE TABLE "OW_TST_US"."TIPOUSUARIO"(
+	"ID"                   INTEGER NOT NULL,
+	"NOMBRE_TIPO_USUARIO"  VARCHAR(255) NOT NULL ,
+	"ID_USUARIO" 	       INTEGER NULL
 );
 
 --
 
-CREATE TABLE "OW_TST_US"."TipoPagina"(
-	"id"                 integer not null,
-	"nombre_tipo_pagina" varchar(255) not null 
+CREATE TABLE "OW_TST_US"."TIPOPAGINA"(
+	"ID"                 INTEGER NOT NULL,
+	"NOMBRE_TIPO_PAGINA" VARCHAR(255) NOT NULL 
 );
 
 --
 
-CREATE TABLE "OW_TST_US"."Pagina"(
-	"id"               integer not null,
-	"nombre_pagina"    varchar(255) not null ,
-	"tipo_pagina"      integer not null
+CREATE TABLE "OW_TST_US"."PAGINA"(
+	"ID"               INTEGER NOT NULL,
+	"NOMBRE_PAGINA"    VARCHAR(255) NOT NULL ,
+	"TIPO_PAGINA"      INTEGER NULL
 );
 
 --
 
-CREATE TABLE "OW_TST_US"."Estado"
+CREATE TABLE "OW_TST_US"."ESTADO"
 (
-	"id"  				integer not null ,
-	"nombre_estado"     VARCHAR(255) not null
+	"ID_ESTADO"  				INTEGER NOT NULL ,
+	"NOMBRE_ESTADO"     VARCHAR(255) NOT NULL
 	);

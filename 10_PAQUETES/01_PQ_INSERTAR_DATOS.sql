@@ -41,7 +41,7 @@ create or replace PACKAGE BODY PERSONAS_CRUD AS
 
     BEGIN
 
-			
+
 			select COUNT(*) INTO v_numeroregistro FROM USUARIOS;
 			if v_numeroregistro = 0 then
 				INSERT INTO 
@@ -52,7 +52,9 @@ create or replace PACKAGE BODY PERSONAS_CRUD AS
 			msg_respuesta:='La persona fue registrada';
 			dbms_output.put_line(msg_respuesta);
 			else
-				select DOCUMENTO into v_documento from PERSONAS;
+				FOR J IN (select DOCUMENTO from PERSONAS) LOOP
+                v_documento:=J.DOCUMENTO;
+                END LOOP;
 				if p_documento = v_documento then
 				cod_respuesta:='Error';
 				msg_respuesta:='La persona ya existe';
@@ -68,5 +70,5 @@ create or replace PACKAGE BODY PERSONAS_CRUD AS
 				end if;
          end if;            
 	END ;
- 
+
 END PERSONAS_CRUD;

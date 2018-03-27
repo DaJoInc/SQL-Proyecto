@@ -38,6 +38,16 @@ CREATE OR REPLACE PACKAGE ORQUESTADOR AS
 
   );
 
+  
+  PROCEDURE INGRESOADMIN(
+			p_nickname			 IN USUARIOS.NICKNAME%TYPE,
+			p_nicknameestado			 IN USUARIOS.NICKNAME%TYPE,
+			p_contrasena		 IN USUARIOS.CONTRASENA%TYPE,
+			p_estado			 IN USUARIOS.ESTADO%TYPE,
+		  
+		  cod_respuesta        OUT VARCHAR,
+		  msg_respuesta        OUT VARCHAR
+  );
 END ORQUESTADOR;
 
  /
@@ -112,4 +122,21 @@ create or replace PACKAGE BODY ORQUESTADOR AS
 			
 	END ;
  
+ PROCEDURE INGRESOADMIN(
+			p_nickname			 IN USUARIOS.NICKNAME%TYPE,
+			p_nicknameestado			 IN USUARIOS.NICKNAME%TYPE,
+			p_contrasena		 IN USUARIOS.CONTRASENA%TYPE,
+			p_estado			 IN USUARIOS.ESTADO%TYPE,
+			
+			cod_respuesta        OUT VARCHAR,
+		    msg_respuesta        OUT VARCHAR
+
+  ) IS
+			v_idusuario number;
+			v_idusuariot number;
+			v_tipo number;
+
+    BEGIN
+		INGRESO.INGRESOUSUARIOS(p_nickname, p_contrasena,p_nicknameestado,p_estado,cod_respuesta,msg_respuesta);
+	END ;
 END ORQUESTADOR;

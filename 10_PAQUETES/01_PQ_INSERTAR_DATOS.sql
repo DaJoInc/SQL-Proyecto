@@ -23,6 +23,7 @@ prompt
 
 create or replace PACKAGE BODY PERSONAS_CRUD AS
 --INSERTAR DATOS A UNA TABLA
+
   PROCEDURE INSERTAR(
             p_idusuario          IN PERSONAS.ID_USUARIO%type,
             p_nombre			 IN PERSONAS.NOMBRE%type,
@@ -41,7 +42,6 @@ create or replace PACKAGE BODY PERSONAS_CRUD AS
 
     BEGIN
 
-
 			select COUNT(*) INTO v_numeroregistro FROM USUARIOS;
 			if v_numeroregistro = 0 then
 				INSERT INTO 
@@ -51,23 +51,21 @@ create or replace PACKAGE BODY PERSONAS_CRUD AS
 			cod_respuesta:='OK';
 			msg_respuesta:='La persona fue registrada';
 			dbms_output.put_line(msg_respuesta);
-			else
-				FOR J IN (select DOCUMENTO from PERSONAS) LOOP
-                v_documento:=J.DOCUMENTO;
-                END LOOP;
-				if p_documento = v_documento then
-				cod_respuesta:='Error';
-				msg_respuesta:='La persona ya existe';
-				dbms_output.put_line(msg_respuesta);
-				else
-					INSERT INTO 
+            end if;
+            select COUNT(*) INTO v_documento from PERSONAS where DOCUMENTO = p_documento;
+			IF v_documento = 0 then
+            INSERT INTO 
 					PERSONAS("ID_USUARIO","NOMBRE","APELLIDOS","DOCUMENTO","TIPO_DOCUMENTO","CORREO","ANO_NACIMIENTO","TELEFONO") 
 					VALUES 
 					(p_idusuario,p_nombre, p_apellidos, p_documento, p_tipodocumento, p_correo, p_anonacimiento,p_telefono);
 				cod_respuesta:='OK';
 				msg_respuesta:='La persona fue registrada';
 				dbms_output.put_line(msg_respuesta);
-				end if;
+                ELSE
+				cod_respuesta:='Error';
+				msg_respuesta:='La persona ya existe';
+				dbms_output.put_line(msg_respuesta);
+
          end if;            
 	END ;
 

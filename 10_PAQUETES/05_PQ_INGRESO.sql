@@ -1,3 +1,35 @@
+create or replace PACKAGE INGRESO AS
+--
+  PROCEDURE INGRESOUSUARIO(
+			p_nickname			 IN USUARIOS.NICKNAME%TYPE,
+			p_contrasena		 IN USUARIOS.CONTRASENA%TYPE,
+
+			cod_respuesta        OUT VARCHAR,
+              id_usuario       OUT VARCHAR,
+		    msg_respuesta        OUT VARCHAR
+
+  );
+
+	PROCEDURE INGRESOADMIN(
+			p_nickname			 IN USUARIOS.NICKNAME%TYPE,
+			p_contrasena		 IN USUARIOS.CONTRASENA%TYPE,
+            p_nicknameestado		 IN USUARIOS.NICKNAME%TYPE,
+			p_estado			 IN USUARIOS.ESTADO%TYPE,
+
+			cod_respuesta        OUT VARCHAR,
+		    msg_respuesta        OUT VARCHAR
+
+  );
+
+END INGRESO;
+
+ /
+
+prompt
+prompt PACKAGE BODY: INGRESO
+prompt
+
+
 create or replace PACKAGE BODY INGRESO AS
 --
   PROCEDURE INGRESOUSUARIO(

@@ -159,14 +159,7 @@ PACKAGE BODY: USUARIOS_CRUD
 
 Package Body USUARIOS_CRUD compilado
 
-Errores: comprobar log de compilador
 CREANDO PAQUETE INGRESO
-
-Package INGRESO compilado
-
-
-PACKAGE BODY: INGRESO
-
 
 Package Body INGRESO compilado
 
